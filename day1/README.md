@@ -1,3 +1,4 @@
+
 # oke_vodafone_terraform
 
 ### Understanding lab connection 
@@ -237,5 +238,10 @@ my-message = "hello world this Ashutoshh with OCI-terraform"
 [ashu@ip-172-31-95-43 oci_terraform]$ 
 
 ```
+
+### terraform run cycle 
+
+<img src="run.png">
+
 
 
