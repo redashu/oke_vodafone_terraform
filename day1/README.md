@@ -40,4 +40,64 @@ on linux_amd64
 
 <img src="info.png">
 
+### creating a directory to write code 
+
+```
+mkdir  myterraform_code
+[ashu@ip-172-31-95-43 ~]$ cd  myterraform_code/
+[ashu@ip-172-31-95-43 myterraform_code]$ ls
+[ashu@ip-172-31-95-43 myterraform_code]$ 
+```
+
+## Step to setup terraform for OCI 
+
+### create provider.tf  and put details as given below ---> provider.tf
+
+```
+provider "oci" {
+    region = "ap-mumbai-1"
+    tenancy_ocid    = "q"
+    user_ocid = "o"
+}
+```
+
+### to setup RSA key for OCI as per OCI and terraform standard
+
+<img src="key.png">
+
+```
+cd  ~/.oci/
+[ashu@ip-172-31-95-43 .oci]$ ls
+[ashu@ip-172-31-95-43 .oci]$ 
+[ashu@ip-172-31-95-43 .oci]$ openssl genrsa  -out private_key.pem  2048
+Generating RSA private key, 2048 bit long modulus
+..........................................................+++
+.......+++
+e is 65537 (0x10001)
+[ashu@ip-172-31-95-43 .oci]$ ls
+private_key.pem
+[ashu@ip-172-31-95-43 .oci]$ ls
+private_key.pem
+[ashu@ip-172-31-95-43 .oci]$ ls -l 
+total 4
+-rw-rw-r-- 1 ashu ashu 1679 Nov 27 07:21 private_key.pem
+
+[ashu@ip-172-31-95-43 .oci]$ chmod 600 private_key.pem 
+[ashu@ip-172-31-95-43 .oci]$ ls
+private_key.pem
+[ashu@ip-172-31-95-43 .oci]$ ls -l
+total 4
+-rw------- 1 ashu ashu 1679 Nov 27 07:21 private_key.pem
+
+[ashu@ip-172-31-95-43 .oci]$ openssl rsa -pubout  -in private_key.pem -out public_key.pem 
+writing RSA key
+[ashu@ip-172-31-95-43 .oci]$ ls
+private_key.pem  public_key.pem
+
+```
+
+### terraform OCI setup as per OCI stanadard 
+
+<img src="ocistd.png">
+
 
