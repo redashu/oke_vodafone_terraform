@@ -246,4 +246,11 @@ my-message = "hello world this Ashutoshh with OCI-terraform"
 
 ## Introduction to VCN in OCI 
 
-### 
+### OKE info 
+
+<img src="oke1.png">
+
+### oke security rules 
+
+<img src="oke2.png">
+
