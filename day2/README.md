@@ -14,3 +14,5 @@
 
 ### creating Entire VCN --with standard of OCI 
 
+### region av D
+
