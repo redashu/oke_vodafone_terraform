@@ -8,3 +8,9 @@
 
 <img src="lab.png">
 
+### Introduction to VCN with terraform for OKE 
+
+<img src="vnc.png">
+
+### creating Entire VCN --with standard of OCI 
+
