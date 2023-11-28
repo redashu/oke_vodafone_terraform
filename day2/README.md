@@ -10,7 +10,7 @@
 
 ### Introduction to VCN with terraform for OKE 
 
-<img src="vnc.png">
+<img src="vcn.png">
 
 ### creating Entire VCN --with standard of OCI 
 
